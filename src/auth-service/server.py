@@ -10,11 +10,11 @@ app = FastAPI()
 security = HTTPBasic()
 def get_db_connection():
     conn = psycopg2.connect(
-        host=os.getenv('DATABASE_HOST'),
-        database=os.getenv('DATABASE_NAME'),
-        user=os.getenv('DATABASE_USER'),
-        password=os.getenv('DATABASE_PASSWORD'),
-        port=os.getenv('DATABASE_PORT'))
+        host=os.getenv('POSTGRES_HOST'),
+        database=os.getenv('POSTGRES_NAME'),
+        user=os.getenv('POSTGRES_USER'),
+        password=os.getenv('POSTGRES_PASSWORD'),
+        port=os.getenv('POSTGRES_PORT'))
     return conn
 @app.post("/login")
 def login(credentials: HTTPBasicCredentials = Depends(security)):
