@@ -1,0 +1,7 @@
+exit
+cd ..
+})
+  roles: [{ role: "readWrite", db: "appdb" }]
+  pwd: "apppassword",
+  user: "appuser",
+use appdb
