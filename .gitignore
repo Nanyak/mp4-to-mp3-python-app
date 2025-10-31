@@ -1,4 +1,4 @@
 .env
-pg_data
-rabbitmq_data
-mongo_data
+/pg_data
+/rabbitmq_data
+/mongo_data
