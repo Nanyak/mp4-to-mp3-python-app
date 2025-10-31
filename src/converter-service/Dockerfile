@@ -5,6 +5,7 @@ WORKDIR /app
 COPY requirements.txt .
 
 RUN apt-get update && apt-get install -y --no-install-recommends --no-install-suggests \
+    build-essential libpq-dev python3-dev \
     && pip install --no-cache-dir --upgrade pip \
     && pip install --no-cache-dir -r requirements.txt \
     && apt-get autoremove -y \
@@ -13,4 +14,4 @@ COPY . .
 
 EXPOSE 5001
 
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "5001"]
+CMD ["uvicorn", "consumer:app", "--host", "0.0.0.0", "--port", "5001"]
