@@ -13,13 +13,4 @@ COPY . .
 
 EXPOSE 5001
 
-ARG APP_MODULE=main:app
-ARG PORT=5001
-ARG HOST=0.0.0.0
-
-ENV APP_MODULE=$APP_MODULE
-ENV PORT=$PORT
-ENV HOST=$HOST
-
-ENTRYPOINT ["sh", "-c"]
-CMD ["uvicorn $APP_MODULE --host $HOST --port $PORT"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "5001"]
