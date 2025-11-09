@@ -2,3 +2,9 @@ psycopg2==2.9.11
 fastapi==0.120.2
 python-dotenv==1.2.1
 uvicorn==0.38.0
+pydantic==2.12.3
+PyJWT==1.4.0
+passlib==1.7.4
+pydantic-settings==2.11.0
+pydantic[email]
+bcrypt==5.0.0
